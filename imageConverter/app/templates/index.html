@@ -10,5 +10,14 @@
 		<nav>
 			<header>HEIC Image Converter</header>
 		</nav>
+		<main>
+			<div class="from-container">
+				<form method="post" enctype="multipart/form-data">
+					{% csrf_token %}
+					<input type="file" enctype="multipart/form-data" name="file" accept=".heic" />
+					<input type="submit" value="Upload" />
+				</form>
+			</div>
+		</main>
 	</body>
 </html>
