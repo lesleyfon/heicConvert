@@ -17,6 +17,7 @@
 					<input type="file" name="image_file" accept=".heic" required />
 
 					<select name="image_type" id="image-type-section">
+						<option disabled>-- Select Image type: --</option>
 						<option label="jpeg">jpeg</option>
 						<option label="png">png</option>
 						<option label="svg">svg</option>
@@ -24,6 +25,11 @@
 					</select>
 					<input type="submit" value="Upload" />
 				</form>
+
+				<div>
+					<span>{{ filename }}</span>
+					<button>Download Image</button>
+				</div>
 			</div>
 		</main>
 	</body>
