@@ -14,12 +14,13 @@
 			<div class="from-container">
 				<form method="post" enctype="multipart/form-data">
 					{% csrf_token %}
-					<input type="file" enctype="multipart/form-data" name="file" accept=".heic" />
-					<select>
-						<option value="jpeg">jpeg</option>
-						<option value="png">png</option>
-						<option value="svg">svg</option>
-						<option value="gif">gif</option>
+					<input type="file" name="image_file" accept=".heic" required />
+
+					<select name="image_type" id="image-type-section">
+						<option label="jpeg">jpeg</option>
+						<option label="png">png</option>
+						<option label="svg">svg</option>
+						<option label="gif">gif</option>
 					</select>
 					<input type="submit" value="Upload" />
 				</form>
