@@ -12,6 +12,7 @@ class HomePageView(TemplateView):
         return render(request, 'index.html', context=None)
 
     def post(self, request, **kwargs):
+        print(request.method)
         if request.method == "POST":
 
             image_file = UploadFileForm(data=request.POST, files=request.FILES)

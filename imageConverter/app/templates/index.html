@@ -27,9 +27,18 @@
 				</form>
 
 				<div>
-					<span>{{ filename }}</span>
-					<button>Download Image</button>
-				</div>
+					{% if filename %}
+						<span>{{ filename }} </span>
+						<form method="post">
+
+							<button
+							type="submit"
+							onclick="location.href='/?action=download'"
+							>
+							Download Image
+						</button>
+					</form>
+					{% endif %}
 			</div>
 		</main>
 	</body>
